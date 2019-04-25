@@ -2,10 +2,14 @@ pipeline {
     agent any
 
     environment {
-        GIT_REPOSITORY = 'https://github.com/wynnel/gateway-developer-example'
+        GIT_REPOSITORY = 'https://github.com/david-dc-chen/gateway-developer-example'
         NEW_IMAGE_NAME = 'gateway'
         NEW_IMAGE_TAG = "${BUILD_NUMBER}"
         NEW_IMAGE_REGISTRY_REPOSITORY    = 'docker-hosted'
+        NEW_IMAGE_REGISTRY_HOSTNAME = 'docker.dev1.apimgcp.com'
+        NEW_IMAGE_REGISTRY_USER = 'admin'
+        NEW_IMAGE_REGISTRY_PASSWORD = 'password'
+        NEXUS_REGISTRY_HOSTNAME = 'nexus.dev1.apimgcp.com'
     }
 
     stages {
