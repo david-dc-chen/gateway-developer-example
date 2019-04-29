@@ -1,5 +1,5 @@
-##FROM caapim/gateway:latest
-FROM docker.stable1.apimgcp.com/repository/docker-hosted/gateway:wlui-test
+FROM caapim/gateway:latest
+##FROM docker.stable1.apimgcp.com/repository/docker-hosted/gateway:wlui-test
 USER root
 COPY consul-template/consul-template /opt/consul-template/
 COPY consul-template/config.hcl /opt/consul-template/config.hcl
