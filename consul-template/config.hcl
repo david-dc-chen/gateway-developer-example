@@ -24,10 +24,10 @@ destination="/opt/consul-template/company.com.crt"
 
 template {
 contents="{{ with secret \"secret/gateway/pass\" }}{{ .Data.value }}{{ end }}"
-destination="/opt/consul-template/license.xml"
+destination="/opt/consul-template/pass.xml"
 }
 
 template {
 contents="{{ with secret \"secret/gateway/license\" }}{{ .Data.value }}{{ end }}"
-destination="/opt/consul-template/pass.txt"
+destination="/opt/consul-template/license.txt"
 }
